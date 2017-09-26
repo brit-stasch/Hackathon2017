@@ -23,9 +23,14 @@ public class AvailabilitySign {
 		Map<Integer,String> messages = getMessages(status);
 		System.out.println(messages);
 		int messageNumber = in.nextInt();
-		System.out.println("Setting message..");
-		System.out.println("Message set.");
-		System.out.println("\n\nDisplay text: \n" + messages.get(messageNumber));
+
+		if (messages.keySet().contains(messageNumber)){
+			System.out.println("Setting message..");
+			System.out.println("Message set.");
+			System.out.println("\nDisplay text: \n" + messages.get(messageNumber));
+		}
+		else
+			System.out.println("Message number not found.");
 	}
 
 	public static Map<Integer, String> getMessages(String status){
