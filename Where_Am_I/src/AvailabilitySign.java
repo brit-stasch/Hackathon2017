@@ -9,11 +9,6 @@ public class AvailabilitySign {
 		System.out.println("What is your status? \n('A'- Away, 'D'- Do not disturb, 'H'- Here) ");
 		String status = in.nextLine();
 
-		//		System.out.println("Away: " + !status.equalsIgnoreCase("A"));
-		//		System.out.println("Do not disturb: " + !status.equalsIgnoreCase("D"));
-		//		System.out.println("Here: " + !status.equalsIgnoreCase("H"));
-
-
 		if ((!status.equalsIgnoreCase("A") && !status.equalsIgnoreCase("D") && !status.equalsIgnoreCase("H"))){
 			System.out.println("Invalid status. Setting to default (H)");
 			status = "H";
@@ -48,6 +43,7 @@ public class AvailabilitySign {
 			messages.put(1, "I am currently away from my desk");
 			messages.put(2, "I'm on PTO");
 		}
+		
 		if (status.equalsIgnoreCase("D")){
 			messages.put(1, "Currently fighting fires, please come back later");
 			messages.put(2, "Please, do not disturb");
