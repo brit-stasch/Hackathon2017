@@ -1,97 +1,127 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Hackathon 2017</title>
-	<link href="styles/main.css" type="text/css" rel="stylesheet"> 
-	<link href="styles/normalize.css" type="text/css" rel="stylesheet"> 
-	<link href="styles/skeleton.css" type="text/css" rel="stylesheet"> 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  			integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  			crossorigin="anonymous"></script>
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<h2><em>Tired of people barging into your cube when you&#39;re in your groove on a task?</em></h2>
-			<div class="big-text">
-				<p>Sick of <em>&quot;just a quick question&quot;</em> when it&#39;s never just a quick question?</p>
-				<p>Feeling anti-social?</p>
-				<p>Just want to jam out to music without being interrupted?</p>
-				<p>Are you the &#39;unofficial&#39; secretary of your department? (<em>&quot;Where&#39;s John...?&quot;</em>)</p>
-			</div>
-		</div>
-		<div class="row center">
-			<button class="button-primary" id="set-status-button">Check out our idea for a digital availability sign!</button>
-		</div>
-		<div id="set-status">
-			<div class="row">
-				<label>Status</label>
-				<div class="u-full-width">
-					<button id="away-button" value="A">A - Away</button>
-					<button id="dnd-button" value="D">D - Do Not Disturb</button>
-					<button id="here-button" value="H">H - Here</button>
-				</div>
-			</div>
-			<div class="row">
-				<label>Quick Status</label>
-				<div class="u-full-width">
-					<button id="A1-button" value="A1">1 - I am currently away from my desk</button>
-					<button id="A2-button" value="A2">2 - I'm on PTO</button>
-                    <button id="A3-button" value="A3">3 - I am in a meeting</button>
-                    <button id="A4-button" value="A4">4 - Please leave a message</button>
-					<button id="D1-button" value="D1">1 - Currently fighting fires, please come back later</button>
-					<button id="D2-button" value="D2">2 - Please, do not disturb</button>
+    <head>
+        <meta charset="utf-8">
+        <title>Hackathon 2017</title>
+        <link href="styles/main.css" type="text/css" rel="stylesheet"> 
+        <link href="styles/normalize.css" type="text/css" rel="stylesheet"> 
+        <link href="styles/skeleton.css" type="text/css" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+                crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h2><em>Tired of people barging into your cube when you&#39;re in your groove on a task?</em></h2>
+                <div class="big-text">
+                    <p>Sick of <em>&quot;just a quick question&quot;</em> when it&#39;s never just a quick question?</p>
+                    <p>Feeling anti-social?</p>
+                    <p>Just want to jam out to music without being interrupted?</p>
+                    <p>Are you the &#39;unofficial&#39; secretary of your department? (<em>&quot;Where&#39;s John...?&quot;</em>)</p>
+                </div>
+            </div>
+            <div class="row center">
+                <button class="button-primary" id="set-status-button">Check out our idea for a digital availability sign!</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="set-status">
+                <div class="row">
+                    <label>Status</label>
+                    <div class="u-full-width">
+                        <button id="away-button" value="A">A - Away</button>
+                        <button id="dnd-button" value="D">D - Do Not Disturb</button>
+                        <button id="here-button" value="H">H - Here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="set-message-away">
+
+                <div class="row">
+                    <label>Messages - Away</label>
+                    <div class="u-full-width">
+                        <button id="A1-button" value="A1">1 - I am currently away from my desk</button>
+                        <button id="A2-button" value="A2">2 - I'm on PTO</button>
+                        <button id="A3-button" value="A3">3 - I am in a meeting</button>
+                        <button id="A4-button" value="A4">4 - Please leave a message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id ="set-message-dnd">
+            <div class="row">
+                <label>Messages - Do not disturb</label>
+                <div class="u-full-width">
+                    <button id="D1-button" value="D1">1 - Currently fighting fires, please come back later</button>
+                    <button id="D2-button" value="D2">2 - Please, do not disturb</button>
                     <button id="D3-button" value="D3">3 - Currently hacking...</button>
                     <button id="D4-button" value="D4">4 - Rewriting release notes</button>
-					<button id="H1-button" value="H1">1 - Hey there!</button>
-					<button id="H2-button" value="H2">2 - What's up?</button>
-                    <button id="H3-button" value="H3">3 - Taking questions</button>
-                    <button id="H4-button" value="H4">4 - How's your day going?</button>
-                    <button id="H5-button" value="H5">5 - I am working remotely</button>                    
-				</div>
-			</div>
-			<div class="row">
-				<label for="custom-message">Message</label>
-				<textarea class="u-full-width" placeholder="0 - Custom message" id="custom-message"></textarea>
-			</div>
-			<div class="row">
-				<button id="set" class="button-primary">Set Status</button>
-			</div>
-		</div>
-		<div class="show-status">
-			<div class="row">
-				<div id="status" class="u-full-width"></div>
-			</div>
-		</div>
-		<div class="row">
-			<h3>**Customizable status</h3>
-			<ul>
-				<li>&quot;Do not disturb&quot; for when you&#39;re fighting fires..</li>
-				<li>&quot;Come back later&quot; when that deadline is fast approaching</li>
-				<li>&quot;Available&quot; when you want to be social and entertain questions</li>
-				<li>&quot;Out of the office&quot; / &quot;PTO until December&quot;</li>
-			</ul>
-		</div>
-		<div class="row">
-			<h3>**Integrate with your outlook calendar</h3>
-			<ul>
-				<li>Not in your cube? Let people know if you&#39;re in the building (in meetings) , on business travel, or unreachable on PTO.</li>
-			</ul>
-			<h3>**Digital numbering/queueing system -</h3>
-			<ul>
-				<li>&quot;Take a number...you&#39;re 12th in line. Your question is very important to us...&quot;</li>
-			</ul>
-		</div>
-	</div>
 
-	<script src="main.js" type="text/javascript"></script>
-	<script>
-		// When the user clicks on <div>, open the popup
-		function myFunction() {
-			var popup = document.getElementById("myPopup");
-			popup.classList.toggle("show");
-		}
-	</script>
-</body>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="set-message-here">
+                <div class="row">
+                    <label>Messages - Here</label>
+                    <div class="u-full-width">
+                        <button id="H1-button" value="H1">1 - Hey there!</button>
+                        <button id="H2-button" value="H2">2 - What's up?</button>
+                        <button id="H3-button" value="H3">3 - Taking questions</button>
+                        <button id="H4-button" value="H4">4 - How's your day going?</button>
+                        <button id="H5-button" value="H5">5 - I am working remotely</button>                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <label for="custom-message">Custom Message</label>
+                <textarea class="u-full-width" placeholder="Enter custom message" id="custom-message"></textarea>
+
+                <div class="row">
+                    <button id="set" class="button-primary">Set Status</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="show-status">
+                <div class="row">
+                    <div id="status" class="u-full-width"></div>
+                </div>
+            </div>
+            <div class="row">
+                <h3>**Customizable status</h3>
+                <ul>
+                    <li>&quot;Do not disturb&quot; for when you&#39;re fighting fires..</li>
+                    <li>&quot;Come back later&quot; when that deadline is fast approaching</li>
+                    <li>&quot;Available&quot; when you want to be social and entertain questions</li>
+                    <li>&quot;Out of the office&quot; / &quot;PTO until December&quot;</li>
+                </ul>
+            </div>
+            <div class="row">
+                <h3>**Integrate with your outlook calendar</h3>
+                <ul>
+                    <li>Not in your cube? Let people know if you&#39;re in the building (in meetings) , on business travel, or unreachable on PTO.</li>
+                </ul>
+                <h3>**Digital numbering/queueing system -</h3>
+                <ul>
+                    <li>&quot;Take a number...you&#39;re 12th in line. Your question is very important to us...&quot;</li>
+                </ul>
+            </div>
+
+        </div>
+        <script src="main.js" type="text/javascript"></script>
+        <script>
+            // When the user clicks on <div>, open the popup
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+    </body>
 </html>
