@@ -10,3 +10,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5ffef', end
 .center {
 	text-align: center;
 }
+
+p {
+	margin-bottom: initial;
+}
+
+button.selected, button.selected:focus {
+	background-color: #5cb85c;
+	color: #fff;
+}

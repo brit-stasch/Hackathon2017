@@ -6,6 +6,9 @@
 	<link href="styles/main.css" type="text/css" rel="stylesheet"> 
 	<link href="styles/normalize.css" type="text/css" rel="stylesheet"> 
 	<link href="styles/skeleton.css" type="text/css" rel="stylesheet"> 
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  			integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  			crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container">
@@ -19,7 +22,36 @@
 			</div>
 		</div>
 		<div class="row center">
-			<button class="button-primary">Check out our idea for a digital availability sign!</button>
+			<button class="button-primary" id="set-status-button">Check out our idea for a digital availability sign!</button>
+		</div>
+		<div id="set-status">
+			<div class="row">
+				<label>Status</label>
+				<div class="u-full-width">
+					<button id="away-button" value="A">A - Away</button>
+					<button id="dnd-button" value="D">D - Do Not Disturb</button>
+					<button id="here-button" value="H">H - Here</button>
+				</div>
+			</div>
+			<div class="row">
+				<label>Quick Status</label>
+				<div class="u-full-width">
+					<button id="1-button" value="1">1 - Currently fighting fires, please come back later!</button>
+					<button id="2-button" value="2">2 - Please, do not disturb.</button>
+				</div>
+			</div>
+			<div class="row">
+				<label for="custom-message">Message</label>
+				<textarea class="u-full-width" placeholder="0 - Custom message" id="custom-message"></textarea>
+			</div>
+			<div class="row">
+				<button id="set" class="button-primary">Set Status</button>
+			</div>
+		</div>
+		<div class="show-status">
+			<div class="row">
+				<div id="status" class="u-full-width"></div>
+			</div>
 		</div>
 		<div class="row">
 			<h3>**Customizable status</h3>
