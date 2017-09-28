@@ -43,12 +43,14 @@ public class AvailabilitySign {
 			messages.put(1, "I am currently away from my desk");
 			messages.put(2, "I'm on PTO");
 			messages.put(3, "I am in a meeting");
+			messages.out(4, "Please leave a message");
 		}
 		
 		if (status.equalsIgnoreCase("D")){
 			messages.put(1, "Currently fighting fires, please come back later");
 			messages.put(2, "Please, do not disturb");
 			messages.put(3, "Currently hacking...");
+			messages.put(4, "Rewriting release notes");
 		}
 
 
