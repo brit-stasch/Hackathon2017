@@ -43,10 +43,10 @@
                 <div class="row">
                     <label>Messages - Away</label>
                     <div class="u-full-width">
-                        <button id="A1-button" value="A1">1 - I am currently away from my desk</button>
-                        <button id="A2-button" value="A2">2 - I'm on PTO</button>
-                        <button id="A3-button" value="A3">3 - I am in a meeting</button>
-                        <button id="A4-button" value="A4">4 - Please leave a message</button>
+                        <button id="A1-button" onclick="A1()"  value="A1">1 - I am currently away from my desk</button>
+                        <button id="A2-button" onclick ="A2()" value="A2">2 - I'm on PTO</button>
+                        <button id="A3-button" onclick ="A3()" value="A3">3 - I am in a meeting</button>
+                        <button id="A4-button" onclick ="A4()" value="A4">4 - Please leave a message</button>
                     </div>
                 </div>
             </div>
@@ -55,10 +55,10 @@
             <div class="row">
                 <label>Messages - Do not disturb</label>
                 <div class="u-full-width">
-                    <button id="D1-button" value="D1">1 - Currently fighting fires, please come back later</button>
-                    <button id="D2-button" value="D2">2 - Please, do not disturb</button>
-                    <button id="D3-button" value="D3">3 - Currently hacking...</button>
-                    <button id="D4-button" value="D4">4 - Rewriting release notes</button>
+                    <button id="D1-button" onclick="D1()" value="D1">1 - Currently fighting fires, please come back later</button>
+                    <button id="D2-button" onclick="D2()" value="D2">2 - Please, do not disturb</button>
+                    <button id="D3-button" onclick="D3()" value="D3">3 - Currently hacking...</button>
+                    <button id="D4-button" onclick="D4()" value="D4">4 - Rewriting release notes</button>
 
                 </div>
             </div>
@@ -69,11 +69,11 @@
                 <div class="row">
                     <label>Messages - Here</label>
                     <div class="u-full-width">
-                        <button id="H1-button" value="H1">1 - Hey there!</button>
-                        <button id="H2-button" value="H2">2 - What's up?</button>
-                        <button id="H3-button" value="H3">3 - Taking questions</button>
-                        <button id="H4-button" value="H4">4 - How's your day going?</button>
-                        <button id="H5-button" value="H5">5 - I am working remotely</button>                    </div>   
+                        <button id="H1-button" onclick="H1()" value="H1">1 - Hey there!</button>
+                        <button id="H2-button" onclick="H2()" value="H2">2 - What's up?</button>
+                        <button id="H3-button" onclick="H3()" value="H3">3 - Taking questions</button>
+                        <button id="H4-button" onclick="H4()" value="H4">4 - How's your day going?</button>
+                        <button id="H5-button" onclick="H5()" value="H5">5 - I am working remotely</button>                    </div>
                 </div>
             </div>
         </div>
@@ -81,12 +81,12 @@
             <div class="container">
                 <label for="custom-message">Custom Message</label>
                 <textarea class="u-full-width" placeholder="Enter custom message" id="custom-message"></textarea>
-
-                <div class="row">
-                    <button id="set" class="button-primary">Set Status</button>
-                </div>
             </div>
         </div>
+                <!--<div class="row">-->
+                    <!--<button id="set" class="button-primary" >Set Status</button>-->
+                <!--</div>-->
+            <!--</div>-->
 
         <div class="container">
             <div class="show-status">

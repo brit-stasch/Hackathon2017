@@ -74,6 +74,7 @@ $(document).ready(function(){
                            }
     }
 
+
     $("button").click(function() {
         selectButton($(this));
     });
@@ -126,3 +127,81 @@ $(document).ready(function(){
     // window.alert("What is your status? ('A'- Away, 'D'- Do not disturb, 'H'- Here)")
 
 });
+function A1(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Away3.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function A2(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Away2.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function A3(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Away1.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function A4(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Away4.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function D1(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="DND1.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function D2(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="DND3.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function D3(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="DND2.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function D4(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="DND4.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function H1(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Available3.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function H2(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Available2.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+// function H3(){
+//     // document.getElementById("A1-button").src1="Available1.JPG";
+//     document.write('<img src="Available3.jpg">');
+//     // result.innerHTML="<img src1=\"html/Available1.png\" />";
+//
+// }
+function H4(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Available4.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
+function H5(){
+    // document.getElementById("A1-button").src1="Available1.JPG";
+    document.write('<img src="Available1.jpg">');
+    // result.innerHTML="<img src1=\"html/Available1.png\" />";
+
+}
